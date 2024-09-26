@@ -5,7 +5,13 @@ module.exports = {
     "./*.html" // Scan HTML files in the root directory
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+        librebaskerville: ["Libre Baskerville", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"]
+      }
+    },
   },
   plugins: [],
 }

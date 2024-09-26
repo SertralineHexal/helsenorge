@@ -5,8 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="out.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        /* Alt laget med TailwindCSS uten CDN fordi vi vil ha alt lokat, bortsett fra fontsa da, de vil vi ikke ha lokalt enda. */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        .site-logo {
+            /* Må nesten endre font familie, hvis vi for en eller annen grun ikke har Libre Baskerville så tar den Serif typografien, noe som alle skal ha. */
+            font-family: 'Libre Baskerville', serif;
+        }
+        .nav-item {
+            display: flex;
+            align-items: center;
+            margin-right: 1rem;
+        }
+        .nav-item span {
+            margin-right: 0.5rem;
+        }
+        .login-button {
+            margin-left: auto;
+            background-color: #E2E8F0;
+            padding: 0.75rem 1.5rem;
+            font-family: 'Inter', sans-serif;
+        }
+        .btns button {
+            display: flex;
+            align-items: center;
+        }
+        .btns button span {
+            margin-right: 0.5rem;
+        }
+    </style>
 </head>
-<body>
-    
+<body class="bg-gray-200">
+    <div class="bg-white px-5 py-5">
+        <!-- Site Logo/Helse Norge Logo -->
+        <div class="text-2xl font-librebaskerville site-logo pb-2">HelseNorge</div>
+        <div class="flex items-center font-inter text-blue-950">
+            <p class="nav-item"><span class="material-symbols-outlined">Prescriptions</span>Resepter</p>
+            <p class="nav-item"><span class="material-symbols-outlined">notifications</span>Varslinger</p>
+            <p class="nav-item"><span class="material-symbols-outlined">local_pharmacy</span>Apoteker</p>
+            <p class="nav-item"><span class="material-symbols-outlined">Markunread_mailbox</span>Digital Post</p>
+            <button class="login-button">Login</button>
+        </div>
+    </div>
+
+    <div class="bg-white h-[20rem] p-12 hva-vil-du-gjore m-20 font-librebaskerville text-4xl font-bold">
+        <h1>Hei!</h1>
+        <h1 class="mt-4">Hvordan kan vi hjelpe deg?</h1>
+        <br>
+        <div class="btns flex content-center">
+            <button class="text-lg bg-yellow-100 p-5"><span class="material-symbols-outlined">email</span>Lese melding eller brev</button>
+            &nbsp;
+            <button class="text-lg bg-yellow-100 p-5"><span class="material-symbols-outlined">book_online</span>Bestille Time</button>
+            &nbsp;
+            <button class="text-lg bg-yellow-100 p-5"><span class="material-symbols-outlined">prescriptions</span>Se eller Bestille Resept</button>
+            &nbsp;
+        </div>
+    </div>
+    <div class="footer">
+        Laget av @SertralineHexal. Vennligst se på min <a href="https://github.com/sertralinehexal" target="_blank">GitHub</a> for min portfolio eller CV.
+    </div>
 </body>
+
+<style>
+    /* Litt custom css må jo til da :) */
+    .footer {
+            /* Få den i center posisjon, altså midt i skjermen */
+            text-align: center;
+            /* Legg til litt padding fordi vi vil den ska se mere moderne ut, padding gjør den "større" eller får teksten litt bedre se-ende ut. */
+            padding: 20px;
+            /* Endre tekst størrelse/typografi størrelse til 16 piksler */
+            font-size: 16px;
+            /* Endre farge på teksten, fordi color gir tekst farge og ikke bakgrunn. */
+            color: #4A5568;
+        }
+        .footer a {
+            color: #3182CE;
+            /* Fjerne dekorering */
+            text-decoration: none;
+        }
+        .footer a:hover {
+            /* Legge til dekorering når du holder musa over. */
+            text-decoration: underline;
+        }
+</style>
 </html>
